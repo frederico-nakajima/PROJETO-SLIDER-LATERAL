@@ -1,58 +1,83 @@
-*{box-sizing: border-box;}
-body{font-family: Arial;margin: 0;}
+*{box-sizing: border-box; margin: 0;
+    padding: 0;}
+body{
+    font-family: Arial;
+   background-color: black;
+    height: 100vh;
+    width: 100vw;
+}
 
+.slideshow-conteiner{
+   
+  position: absolute;
+  width: 500px;
+  height: 150px;
+  left: 50%;
+  transform: translate(-50%);
+
+    
+}
+
+.imagens{
+    width: 500px;
+    height: 150px;
+    position: absolute;
+   
+   
+
+}
+
+.setas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 450px;
+   position: absolute;
+   top: 0;
+    width: 500px;
+    height: 150px;
+  
+}
 .slide{
     display: none;
+        width: 80%;
+    max-width: 500px;
+    height: 40vw;
+    max-height: 150px;
+    
+
+    position: relative;
+    
 }
-.imgSlide{vertical-align: middle;}
+
+
+
+
+.slider{
+    object-fit: cover;
+    
+    
+}
+
+
 
 .btnAnterior, .btnProximo{
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 15px;
-    margin-top: -22px;
     color: aqua;
-    font-weight: bold;
-    font-size: 30px;
-    transition: 0.4s ease;
-    user-select: none;
-
+    font-size: 50px;
+    cursor: pointer;
 }
 
-.btnAnterior{
-    left: 0;
-}
-
-.btnProximo{
-    right: 0;
-}
-.btnAnterior:hover, .btnProximo:hover{
-    background-color: aquamarine;
-}
-
-.textoSlide{
-    color: blue;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    width: 100%;
+.indicadores{
     text-align: center;
-    transition: 0.4 ease;
+    position: relative;
+    top: 160px;
 }
 
-.numerSlide{
-    color: blueviolet;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-}
 
 .indicador{
     cursor: pointer;
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
     margin: 2px;
     background-color: aquamarine;
     border-radius: 50%;display: inline-block;
